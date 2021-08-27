@@ -1,0 +1,301 @@
+<%@ Register TagPrefix="WpNs0" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%-- _lcid="1033" _version="16.0.7101" _dal="1" --%>
+<%-- _LocalBinding --%>
+
+<%@ Page Language="C#" MasterPageFile="../_catalogs/masterpage/seattle_Custom.master" Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage,Microsoft.SharePoint,Version=16.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" meta:progid="SharePoint.WebPartPage.Document" meta:webpartpageexpansion="full" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Assembly Name="Microsoft.Web.CommandUI, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="Controls" Namespace="Microsoft.SharePoint.Spx.WebSite.Controls" Assembly="Microsoft.SharePoint.Spx.WebSite.ApplicationPages, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">
+    <SharePoint:ListItemProperty Property="BaseName" maxlength="40" runat="server"/>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
+	<meta name="GENERATOR" content="Microsoft SharePoint" />
+    <meta name="ProgId" content="SharePoint.WebPartPage.Document" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="CollaborationServer" content="SharePoint Team Web Site" />
+    <SharePoint:ScriptBlock runat="server">var navBarHelpOverrideKey = 
+	
+		&quot;WSSEndUser&quot;; </SharePoint:ScriptBlock>
+    <SharePoint:StyleBlock runat="server">
+      body #s4-leftpanel 
+	
+	{
+	display:none;
+}
+.s4-ca {
+	margin-left:0px;
+}
+#s4-titlerow
+{
+}
+
+#layoutsTable, #ctl00_MSO_ContentDiv
+{
+margin-top: 40px;
+}
+.wrapperR {
+background: white;
+min-height: 100%;
+max-width: 1300px;
+padding: 3em 0; /* push content so its visible otherwise it will be 	hidden 
+		
+		under the fixed header and footer pdding-right:30 */
+margin: auto;
+}
+
+@media screen and (max-width: 1300px) {
+.wrapper {
+padding: 0;
+}
+.DivHead2 {
+width:100%; 
+}
+}
+
+@media screen and (min-width: 1300px) {
+
+#DivDaily{
+padding-right: 30px;}
+
+}
+@media screen and (max-width: 481px) 
+  {
+  #DivHead2 {
+width:100%; 
+}
+#tableCars{ margin-left: 4%;}
+  }
+  @media screen and (min-width: 482px){
+  #DivHead2 {
+width:100%; 
+}
+#tableCars{ margin-left: 17%;}
+
+  }
+  @media screen and (min-width: 700px) and (max-width: 1300px)
+{
+#top h1, h2, h3, h4, h5, h6 {
+letter-spacing: 0px!important; }
+#tableCars{ margin-left: 17%;}
+
+}
+
+ </SharePoint:StyleBlock>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="PlaceHolderSearchArea" runat="server">
+	<WebPartPages:SPProxyWebPartManager runat="server" id="spproxywebpartmanager"></WebPartPages:SPProxyWebPartManager>
+<SharePoint:DelegateControl runat="server"
+        ControlId="SmallSearchInputBox"/>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageDescription" runat="server">
+	<SharePoint:ProjectProperty Property="Description" runat="server"/>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
+	<div class="ms-hide">
+        <WebPartPages:WebPartZone runat="server" title="loc:TitleBar" id="TitleBar" AllowLayoutChange="false" AllowPersonalization="false" Style="display: none;"><ZoneTemplate>
+		<WebPartPages:TitleBarWebPart runat="server" HeaderTitle="rtAluminium" Title="Web Part Page Title Bar" FrameType="None" SuppressWebPartChrome="False" Description="" IsIncluded="True" ZoneID="TitleBar" PartOrder="2" FrameState="Normal" AllowRemove="False" AllowZoneChange="True" AllowMinimize="False" AllowConnect="True" AllowEdit="True" AllowHide="True" IsVisible="True" DetailLink="" HelpLink="" HelpMode="Modeless" Dir="Default" PartImageSmall="" MissingAssembly="Cannot import this Web Part." PartImageLarge="" IsIncludedFilter="" ExportControlledProperties="True" ConnectionID="00000000-0000-0000-0000-000000000000" ID="g_0ea81843_e16b_440b_8775_a347abb1aa23" AllowClose="False" ChromeType="None" ExportMode="All" __MarkupType="vsattributemarkup" __WebPartId="{0EA81843-E16B-440B-8775-A347ABB1AA23}" WebPart="true" Height="" Width=""></WebPartPages:TitleBarWebPart>
+
+		</ZoneTemplate></WebPartPages:WebPartZone>
+    </div>
+
+    <link rel="stylesheet" href="/Sites/3000277/SiteAssets/RT_Template/css/skel.css" />
+    <link rel="stylesheet" href="/Sites/3000277/SiteAssets/RT_Template/css/style.css" />
+    <link rel="stylesheet" href="/Sites/3000277/SiteAssets/RT_Template/css/style-xlarge.css" />
+    <link rel='stylesheet' href='/Sites/3000277/SiteAssets/RT_Template/css/marquee.css' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="/Sites/3000277/SiteAssets/RT_Template/css/jquery-comments.css" />
+	<script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/marquee.js"></script> 
+	
+	<style type="text/css">
+	/* The height of the Promoted Link Webpart */
+	
+	</style>
+	<div class="wrapperR" >
+
+	<div id="top" class="" style="margin: auto;left: auto;width:1320px !important;">
+	<!--	<section><div class="row"><div id="topDiv" style="height:100px;" ></div></div>
+		<h2 style="text-align: center;width:100%;font-size: x-large; font-weight:bold; font-weight:200;color:red; margin-top:-50px;">
+        Market Analysis</h2>
+        </section>-->
+		</div>
+	
+<div id="DivHead2" style="width:100%">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script>
+      $(function(){
+      
+      var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Documents')/items?$select=EncodedAbsUrl,Title,Modified,Created%20&$orderby=Modified%20desc&$top=1000";
+      
+      $.ajax({
+      url: requestUri,
+      type: "GET",
+      headers: {
+      "accept":"application/json; odata=verbose"
+      },
+      success: onSuccess,
+      error: onError
+      });
+      function onSuccess(data) {
+      var items = data.d.results;
+      var a=0;
+      var b=0;
+      var c=0;
+      var fullResults3='<table id="tableCars4" style="margin-bottom: 5px; color:black; font-family: calibri; font-weight:bold;"><tbody>';
+      var fullResults2='<table id="tableCars4" style="margin-bottom: 5px; color:black; font-family: calibri; font-weight:bold;margin-right: 1%;"><tbody>';
+      var fullResults = '<table id="tableCars" style="margin-bottom: 5px; color:black; font-family: calibri; font-weight:bold;margin-right: 1%;"><tbody>';
+      for (var i = 0; i < items.length; i++) {
+      
+      var strPdfL="https://riotinto.sharepoint.com/Sites/3000277/Documents/Market%20Analysis%20Reports/Commodity/Cross%20Commodity/China/Insights/";
+      var strPodCL="https://riotinto.sharepoint.com/Sites/3000277/Documents/Market%20Analysis%20Reports/Commodity/Cross%20Commodity/China/China%20Cross%20Commodity%20Insights%20Podcast%20(Chinese)/";
+      var strPodEL="https://riotinto.sharepoint.com/Sites/3000277/Documents/Market%20Analysis%20Reports/Commodity/Cross%20Commodity/China/China%20Cross%20Commodity%20Insights%20Podcast%20(English)/";
+
+      var day = new Date();
+      var days = 7 - day.getDay() -5;
+      var nextDay = new Date(day.setDate(day.getDate() + days)); 
+      var TueDate=new Date(nextDay);
+      var myDate = new Date(items[i].Modified);
+            var month = [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ][myDate.getMonth()];
+            var strdt = myDate.getDate() + " " + month + " " + myDate.getFullYear();
+            var TuesdayDT=TueDate.getDate() + " " + month + " " + TueDate.getFullYear();
+      
+      var strAL1=items[i].EncodedAbsUrl;
+      
+      var strPdf=strAL1.substr(0,127);
+      var strPodC=strAL1.substr(0,177);
+      var strPodE=strAL1.substr(0,177);
+
+      var pdfL = strAL1.substring(0, strAL1.lastIndexOf('/'));
+      
+      if(strPdf==strPdfL && a==0)
+      {
+      a=1;
+      fullResults += '<tr style="height:61px;important">';
+      fullResults += '<td class="container1" style="width:100px;vertical-align: middle;"><a style="text-decoration:none" style="text-decoration:none" href=' + items[i].EncodedAbsUrl + ' target="myFrame12"><img style="display: block; height: 100px; width: 100px;" src="https://riotinto.sharepoint.com/:i:/r/Sites/3000277/Documents/Market%20Analysis%20Sharepoint%20Portal/Images/PDF%20and%20Podcasts/PDF.png" ><div class="content1" style="height: 20px; width: 100px;font-size:15px;"><p style="margin-left: 5px;">' + strdt + '</p></div></a></td>';
+      fullResults += '</tr></tbody></table>';
+      }
+      
+      else if(strPodE==strPodEL && b==0)
+      {
+          b=1;
+      fullResults2 += '<tr style="height:61px;important">';
+      fullResults2 += '<td class="container1" style="width:100px;vertical-align: middle;"><a style="text-decoration:none" style="text-decoration:none" href=' + items[i].EncodedAbsUrl + ' target="myFrame12"><img style="display: block; height: 100px; width: 100px" src="https://riotinto.sharepoint.com/:i:/r/Sites/3000277/Documents/Market%20Analysis%20Sharepoint%20Portal/Images/PDF%20and%20Podcasts/Podcast%20(English).jpg" ><div class="content1" style="height: 20px; width: 100px;font-size:15px;"><p style="margin-left: 5px;">' + strdt + '</p></div></a></td>';
+      fullResults2 += '</tr></tbody></table>';
+      }
+      else if(strPodC==strPodCL && c==0)
+      {
+          c=1;
+      fullResults3 += '<tr style="height:61px;important">';
+      fullResults3 += '<td class="container1" style="width:100px;vertical-align: middle;"><a style="text-decoration:none" style="text-decoration:none" href=' + items[i].EncodedAbsUrl + ' target="myFrame12"><img style="display: block; height: 100px; width: 100px" src="https://riotinto.sharepoint.com/:i:/r/Sites/3000277/Documents/Market%20Analysis%20Sharepoint%20Portal/Images/PDF%20and%20Podcasts/Podcast%20(Chinese).jpg" ><div class="content1" style="height: 20px; width: 100px;font-size:15px;"><p style="margin-left: 5px;">' + strdt + '</p></div></a></td>';
+      fullResults3 += '</tr></tbody></table>';
+      }
+     
+      }
+      
+      $('#resultsTable').append(fullResults);            
+      $('#resultsTable').append(fullResults2);
+      $('#resultsTable').append(fullResults3);
+
+      }
+      function onError(error) {
+      alert('Error');
+      }
+      
+      });
+      
+      </script>
+      <style>
+          #resultsTable h4{
+                      text-transform: none;
+                      font-size: 12px;
+                      color: black;
+                    }   
+          a{
+            text-decoration: none; font-weight: bold;
+          }
+          .container1 {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .container1 img {vertical-align: middle;}
+    
+    .container1 .content1 {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;  
+      font-family: calibri; 
+    }
+    
+    .container1 {
+      position: relative;
+      width: 100%;
+    }
+                  </style>
+        <table id='tableCars'style="width: 100%;">
+        <tr>
+        <td>
+        <div id="resultsTable" style="margin-left:0px; display: flex; margin-top: 1%;"></div>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+        <div style="width:100%;margin-top:1%;">
+          <style>
+              iframe {
+                width: 100%;
+                height: 600px;
+              }
+            </style>
+          
+              <iframe id="frame2" src="" name="myFrame12"></iframe>   
+          
+          </div> 
+
+		<div id="footercol" style="width:100%;">
+			<WebPartPages:WebPartZone id="g_2CDE49D88A0748AEAFDD6010CF49C221" runat="server" title="Zone footer"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+		</div>
+	
+</div>
+
+	<script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/jquery-2.2.4.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/jquery-ui.min.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/skel.min.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/skel-layers.min.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/init.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/rtcommon.js"></script>
+
+    <!-- Comments Webpart --> 
+    <script type="text/javascript" src="/Sites/3000277/SiteAssets/RT_Template/js/App.js"></script>
+    <script type="text/javascript" src="/Sites/3000277/SiteAssets/RT_Template/js/comments-data.js"></script>
+    <script type="text/javascript" src="/Sites/3000277/SiteAssets/RT_Template/js/jquery.textcomplete.js"></script>
+    <script type="text/javascript" src="/Sites/3000277/SiteAssets/RT_Template/js/jquery-comments.js"></script>
+
+	<script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/jquery.min.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/_catalogs/masterpage/MarketAnalysis/js/MarketAnalysis_BakUp19022020.js"></script>
+    <script type='text/javascript' src="/Sites/3000277/SiteAssets/RT_Template/js/marquee.js"></script> 
+
+	
+
+</asp:Content>
